@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class FallBlock : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float _initPosX = -0.5f;
+    private float _initPosY = 8.5f;
 
-    // Update is called once per frame
-    void Update()
+    public GameObject GenerateFallBlock(GameObject[] _minos, int fallBlockNum)
     {
-        
+        return Instantiate(_minos[fallBlockNum], new Vector2(_initPosX, _initPosY), Quaternion.identity);
     }
 }
